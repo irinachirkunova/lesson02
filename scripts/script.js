@@ -1,28 +1,10 @@
-let money = 4500,
-    income = "freelance",
-    addExpenses = "Car, Gym, Travelling",
-    deposit = true,
-    mission = 30000,
-    period = 12;
+let num = 266219; 
+num = 2*6*6*2*1*9;
+console.log("произведение: " + num);
 
-//typeof
-console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
+num = num ** 3;
 
-//length
-console.log(income.length);
+//Math.pow(num,3)
 
-//concat
-console.log("Период" + " " + period + " " + "месяцев");
-console.log("Цель заработать" + " " + mission + " " + "долларов");
+console.log(num);
 
-//toLowerCase, split
-let lowCase = addExpenses.toLowerCase();
-let array = lowCase.split(", ");
-console.log(array);
-
-//budget
-let budgetDay;
-budgetDay = 4500 / 30;
-console.log("Budget a day: " + budgetDay + " euros");
