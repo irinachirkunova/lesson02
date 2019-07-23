@@ -1,10 +1,26 @@
 let num = 266219; 
-num = 2*6*6*2*1*9;
-console.log("произведение: " + num);
+var arr = num.toString().split('').map(Number);
+var result = arr.reduce(function(sum, current) {
+    return sum + current;
+  }, 0);
 
-num = num ** 3;
+console.log(result);
 
-//Math.pow(num,3)
 
-console.log(num);
+
+/*function getResult(a,b){
+    let result;
+
+    var arr = (a ** b).toString(10).replace(/\D/g, '0').split('').map(Number);
+    result = 0;
+    for(let number of arr) {
+        
+        result += number;
+    } 
+    
+    return result;
+    }
+    
+    console.log(getResult(3, 10))*/
+
 
