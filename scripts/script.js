@@ -1,28 +1,50 @@
-let money = 4500,
-    income = "freelance",
-    addExpenses = "Car, Gym, Travelling",
-    deposit = true,
-    mission = 30000,
-    period = 12;
+'use strict';
+/* 
 
-//typeof
-console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
+1.Написать скрипт, которые заменяет слово "функция" и его однокоренные слова в div с id=task1 на «<strong>функция</strong>». 
 
-//length
-console.log(income.length);
+2. Написать скрипт который в div с id=task2 найдет время. Время имеет формат часы:минуты. И часы, и минуты состоят из двух цифр, пример: 09:00.
+заключить найденное время в тег <b></b>
 
-//concat
-console.log("Период" + " " + period + " " + "месяцев");
-console.log("Цель заработать" + " " + mission + " " + "долларов");
+3. Создать запрос во всем документе найти текст в кавычках и заключить его в теги <mark></mark>
 
-//toLowerCase, split
-let lowCase = addExpenses.toLowerCase();
-let array = lowCase.split(", ");
-console.log(array);
+4. Замените в документе домены вида http://site.ru на <a href="http://site.ru">site.ru</a>, 
 
-//budget
-let budgetDay;
-budgetDay = 4500 / 30;
-console.log("Budget a day: " + budgetDay + " euros");
+5. Напишите регулярное выражение для поиска цвета, заданного как #ABCDEF, вывести цвет в консоль
+
+6. Не обязательное усложненное +1 балл
+Ссылки такого вида http://site.ru/aaaa/bbbb.html заменить
+на <a href="http://site.ru/aaaa/bbbb.html">site.ru</a>
+
+
+Попрактикуйтесь на кроссвордах https://regexcrossword.com/
+и на задачках https://habr.com/ru/post/167015/
+ */
+
+ //1
+ //let string = document.getElementById('task1');
+//console.log(string);
+//let result = string.innerHTML;
+//console.log(result); 
+
+//string.innerHTML = result.replace(/функци/gi, '<strong>функция</strong');
+//string.innerHTML = text.replace(result, 'MOREEEEE');
+
+//2
+let string2 = document.getElementById('task2');
+let result2 = string2.innerHTML;
+let reg = new RegExp('\d{2}[:]d{2}gi')
+string2.innerHTML = result2.replace(reg, '<b>reg</b>')
+
+//3
+//let reg3 = new RegExp('["]\.["]');
+//let result3 = string2.innerHTML;
+//string2.innerHTML = result3.replace(reg3, '<mark>reg3</mark>')
+
+//4 
+let result = string2.innerHTML.replace('^http://[a-z.-_]+\.[a-z]{2,3}$', '');
+console.log(result);
+
+//string2.innerHTML = result4.replace(reg4, '<a href="http://site.ru">site.ru</a>');
+
+
